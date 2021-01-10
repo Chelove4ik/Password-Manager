@@ -64,8 +64,6 @@ void write(const std::string &filename, const nlohmann::json &jsData, const std:
     PRINT("Сохранение и выход...");
     string buffer = jsData.dump();
 
-    cout << jsData.dump(4) << endl;
-
     encode(&buffer, passHash);
     crypt(&buffer, passHash);
 
